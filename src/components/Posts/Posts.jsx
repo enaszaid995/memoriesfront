@@ -1,6 +1,5 @@
 
 import React, { useEffect, useState } from 'react'
-import { useSelector } from 'react-redux';
 import { useParams } from 'react-router-dom';
 import { useHttp } from '../hooks/useHttp';
 import ErrorModal from '../layouts/form/Error';
@@ -10,9 +9,7 @@ import Post from './Post'
 const Posts = () => {
    
   
-  const auth = useSelector((state) => state.auth.authId);
   const params=useParams();
-  console.log(auth)
   const[loadedData,setLoadedData]=useState('');
   const {sendRequest,clearError,error,isLoadding}=useHttp();
   useEffect(()=>{
@@ -21,13 +18,13 @@ const Posts = () => {
       const data= await sendRequest(`${process.env.REACT_APP_BACKEND_URL}/places/user/${params.id}`);
       setLoadedData(data.places);
       }catch(err){
-        console.log(err);
+      
       }
       
     };
     getPlaces();
   },[sendRequest,params])
-  console.log(loadedData);
+ 
   return (
     
     <div style={{ width:"50%",margin:'auto'}}>

@@ -64,7 +64,7 @@ const NewPlace = () => {
         // {'Content-Type':'application/json'}
         );
     
-         // console.log(responseData)
+
       //dispatch(authActions.login(responseData.user.id));
      navigate('/');
     }catch(err){}
