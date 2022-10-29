@@ -1,0 +1,14 @@
+.user{
+    margin: auto;
+    margin-top: 20px;
+    text-decoration: none;
+}
+
+.header:hover{
+    background-color: black;
+    color: wheat;
+}
+
+.navlink{
+    text-decoration: none;
+}

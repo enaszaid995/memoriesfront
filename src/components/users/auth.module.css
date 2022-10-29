@@ -1,0 +1,10 @@
+.form{
+    margin: auto;
+    width: 50%;
+}
+.btn{
+    display: flex;
+}
+.submit{
+    color: green;
+}
